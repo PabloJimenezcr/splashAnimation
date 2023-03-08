@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Tilt Neon';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/tiltneon/v5/E21L_d7gguXdwD9LEFY2WCeElCNtd-eBqpHp1TzrkJSmwpj5ndxquXK9.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  height: 100vh;
+  overflow: hidden;
+}
+body h2 {
+  font-family: 'Tilt Neon', cursive;
+  font-size: 14vh;
+  z-index: 100000000;
+  user-select: none;
+  color: #fff;
+  text-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+}
+body span {
+  position: absolute;
+  pointer-events: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  5%,
+  95% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
